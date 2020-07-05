@@ -1,0 +1,40 @@
+.select__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.card__parent {
+  background: #5bc0be;
+  width: 500px;
+  height: 400px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card__parent>* {
+  border-radius: 2px;
+  width: 100%;
+  top: 15px;
+  bottom: 15px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card__child--1 {
+  background: #e5d4ed;
+  height: 150px;
+}
+
+.card__child--2 {
+  background: #f5d547;
+  height: 150px;
+}
+
+.card__title {
+  padding: 10px;
+  margin: 0;
+}

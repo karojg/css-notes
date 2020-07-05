@@ -5,6 +5,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/About';
 import { SmileOutlined } from '@ant-design/icons';
+import Positioning from './components/Positioning';
 
 const { Header, Content, Footer } = Layout;
 
@@ -35,7 +36,9 @@ const App = () => {
               <Route path="/about">
                 <About />
               </Route>
-              <Route path="/position">POSITION</Route>
+              <Route path="/position">
+                <Positioning />
+              </Route>
               <Route path="/display">DISPLAY</Route>
             </Switch>
           </div>
