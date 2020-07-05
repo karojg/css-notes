@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/About';
+import { SmileOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
@@ -40,7 +41,9 @@ const App = () => {
           </div>
         </Content>
       </Router>
-      <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+      <Footer style={{ textAlign: 'center' }}>
+        Made with some red wine <SmileOutlined />
+      </Footer>
     </Layout>
   );
 };
