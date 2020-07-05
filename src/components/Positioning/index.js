@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Select, Divider, Collapse } from 'antd';
+import { Select, Divider, Collapse, Tooltip } from 'antd';
 
 import './styles.css';
 
@@ -52,8 +52,11 @@ const Position = () => {
 
   return (
     <div>
+      <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
+        Select the containers position:
+      </Divider>
       <div className="select__container">{select}</div>
-      <Divider dashed />
+      <Divider />
       <div className="card__container">
         <div className="card__parent" style={{ position: position.parent }}>
           <p className="card__title">Parent</p>
@@ -65,12 +68,12 @@ const Position = () => {
           </div>
         </div>
       </div>
-      <Divider dashed />
+      <Divider />
       <Collapse defaultActiveKey={['1']}>
         <Panel header="Types of Positioning" key="1">
           <ul>
             <li>
-              <strong>Static: </strong>Default value. The top,right, bottom, left, and z-index
+              <strong>Static: </strong>Default value. The top, right, bottom, left, and z-index
               properties have no effect.
             </li>
             <li>
@@ -83,7 +86,7 @@ const Position = () => {
               relative to which the element is positioned.
             </li>
             <li>
-              <strong>Stick: </strong>It's treated as relatively positioned until its containing
+              <strong>Sticky: </strong>It's treated as relatively positioned until its containing
               block crosses a specified threshold, at which point it is treated as "stuck" until
               meeting the opposite edge of its containing block.
             </li>
@@ -95,6 +98,12 @@ const Position = () => {
               which case that ancestor behaves as the containing block.
             </li>
           </ul>
+          <span>
+            Reference:{' '}
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">
+              https://developer.mozilla.org/en-US/docs/Web/CSS/position
+            </a>
+          </span>
         </Panel>
         <Panel header="Information about the containers" key="2">
           <ul>
@@ -105,24 +114,48 @@ const Position = () => {
                 <li>margin: auto</li>
                 <li>min-height: 300px</li>
                 <li>min-width: 300px</li>
-                <li>top: 5px //for the sticky behaviour</li>
-                <li>bottom: 5px //for the sticky behaviour</li>
+                <Tooltip
+                  title="top & bottom for the sticky behavior to take place"
+                  color="orange"
+                  key="orange"
+                >
+                  <strong>
+                    <li>top: 5px</li>
+                    <li>bottom: 5px</li>
+                  </strong>
+                </Tooltip>
               </ul>
             </li>
             <li>
               <strong>Children 1: </strong>
               <ul>
                 <li>width: auto</li>
-                <li>top: 5px //for the sticky behaviour</li>
-                <li>bottom: 5px //for the sticky behaviour</li>
+                <Tooltip
+                  title="top & bottom for the sticky behavior to take place"
+                  color="orange"
+                  key="orange"
+                >
+                  <strong>
+                    <li>top: 5px</li>
+                    <li>bottom: 5px</li>
+                  </strong>
+                </Tooltip>
               </ul>
             </li>
             <li>
               <strong>Children 2: </strong>
               <ul>
                 <li>width: auto</li>
-                <li>top: 5px //for the sticky behaviour</li>
-                <li>bottom: 5px //for the sticky behaviour</li>
+                <Tooltip
+                  title="top & bottom for the sticky behavior to take place"
+                  color="orange"
+                  key="orange"
+                >
+                  <strong>
+                    <li>top: 5px</li>
+                    <li>bottom: 5px</li>
+                  </strong>
+                </Tooltip>
               </ul>
             </li>
           </ul>
