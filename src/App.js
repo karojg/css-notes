@@ -1,11 +1,12 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
-import 'antd/dist/antd.css';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/About';
-import { SmileOutlined } from '@ant-design/icons';
 import Positioning from './components/Positioning';
+import Display from './components/Display';
+import './App.css';
+import { Layout, Menu } from 'antd';
+import 'antd/dist/antd.css';
+import { SmileOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
@@ -39,7 +40,9 @@ const App = () => {
               <Route path="/position">
                 <Positioning />
               </Route>
-              <Route path="/display">DISPLAY</Route>
+              <Route path="/display">
+                <Display />
+              </Route>
             </Switch>
           </div>
         </Content>
