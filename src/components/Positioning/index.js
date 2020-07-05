@@ -52,8 +52,11 @@ const Position = () => {
 
   return (
     <div>
+      <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
+        Select the containers position:
+      </Divider>
       <div className="select__container">{select}</div>
-      <Divider dashed />
+      <Divider />
       <div className="card__container">
         <div className="card__parent" style={{ position: position.parent }}>
           <p className="card__title">Parent</p>
@@ -65,7 +68,7 @@ const Position = () => {
           </div>
         </div>
       </div>
-      <Divider dashed />
+      <Divider />
       <Collapse defaultActiveKey={['1']}>
         <Panel header="Types of Positioning" key="1">
           <ul>
@@ -83,7 +86,7 @@ const Position = () => {
               relative to which the element is positioned.
             </li>
             <li>
-              <strong>Stick: </strong>It's treated as relatively positioned until its containing
+              <strong>Sticky: </strong>It's treated as relatively positioned until its containing
               block crosses a specified threshold, at which point it is treated as "stuck" until
               meeting the opposite edge of its containing block.
             </li>

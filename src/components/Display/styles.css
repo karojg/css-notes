@@ -1,0 +1,37 @@
+.display__container {
+  border: 1px solid #333;
+  border-radius: 2px;
+}
+
+.display__container>* {
+  background-color: grey;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  margin: 10px;
+  text-align: center;
+}
+
+.display__cell-1 {
+  padding: 2%;
+}
+
+.display__cell-2 {
+  padding: 4%;
+}
+
+.display__cell-3 {
+  padding: 6%;
+}
+
+.display__cell-4 {
+  padding: 8%;
+}
+
+.display__cell-5 {
+  padding: 10%;
+}
+
+
+.select__container--flex {
+  display: flex;
+  justify-content: space-evenly;
+}
