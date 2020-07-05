@@ -16,7 +16,7 @@ const App = () => {
       <Router>
         <Header>
           <div className="logo" />
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+          <Menu theme="dark" mode="horizontal">
             <Menu.Item key="1">
               <Link to="/about">About</Link>
             </Menu.Item>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { Select, Divider, Row, Col } from 'antd';
+import { Select, Divider, Collapse, Tooltip } from 'antd';
 
 const Display = () => {
   const { Option } = Select;
+  const { Panel } = Collapse;
+
   const [display, setDisplay] = useState('');
   const [flex, setFlex] = useState({
     'flex-direction': '',
@@ -20,13 +22,11 @@ const Display = () => {
   const displayItems = [
     'block',
     'inline',
-    'flow-root',
     'flex',
     'none',
     'inline-block',
     'inline-table',
     'inline-flex',
-    'inline-grid',
   ];
 
   const option = displayItems.map((value) => {
@@ -173,7 +173,13 @@ const Display = () => {
             {justifyContent}
             {flexWrap}
             {alignItems}
-            {alignContent}
+            <Tooltip
+              title="This property has no effect when there is only one line of flex items"
+              color="orange"
+              key="orange"
+            >
+              {alignContent}
+            </Tooltip>
           </div>
         </>
       ) : (
@@ -198,6 +204,53 @@ const Display = () => {
         <div className="display__cell-4">Cell 4</div>
         <div className="display__cell-5">Cell 5</div>
       </div>
+      <Divider />
+
+      <Collapse defaultActiveKey={['1']}>
+        <Panel header="Display Options" key="1">
+          <ul>
+            <li>
+              <strong>Block: </strong>The element generates a block element box, generating line
+              breaks both before and after the element when in the normal flow..
+            </li>
+            <li>
+              <strong>Inline: </strong>TThe element generates one or more inline element boxes that
+              do not generate line breaks before or after themselves. In normal flow, the next
+              element will be on the same line if there is space
+            </li>
+            <li>
+              <strong>Flex: </strong>The element behaves like a block element and lays out its
+              content according to the flexbox model.
+            </li>
+            <li>
+              <strong>None: </strong>Turns off the display of an element so that it has no effect on
+              layout (the document is rendered as though the element did not exist). All descendant
+              elements also have their display turned off.
+            </li>
+            <li>
+              <strong>Inline Block: </strong>The element generates a block element box that will be
+              flowed with surrounding content as if it were a single inline box (behaving much like
+              a replaced element would).
+            </li>
+            <li>
+              <strong>Inline Table: </strong> The inline-table value does not have a direct mapping
+              in HTML. It behaves like an HTML 'table' element, but as an inline box, rather than a
+              block-level box. Inside the table box is a block-level context.
+            </li>
+            <li>
+              <strong>Inline Flex: </strong>The element generates a block element box that will be
+              flowed with surrounding content as if it were a single inline box (behaving much like
+              a replaced element would).
+            </li>
+          </ul>
+          <span>
+            Reference:{' '}
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">
+              https://developer.mozilla.org/en-US/docs/Web/CSS/display
+            </a>
+          </span>
+        </Panel>
+      </Collapse>
     </>
   );
 };
