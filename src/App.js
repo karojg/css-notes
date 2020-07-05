@@ -28,6 +28,9 @@ const App = () => {
         <Content style={{ padding: '0 50px' }}>
           <div className="site-layout-content">
             <Switch>
+              <Route exact path="/">
+                <About />
+              </Route>{' '}
               <Route path="/about">
                 <About />
               </Route>
