@@ -50,10 +50,6 @@ const Position = () => {
     }
   });
 
-  function callback(key) {
-    console.log(key);
-  }
-
   return (
     <div>
       <div className="select__container">{select}</div>
@@ -70,7 +66,7 @@ const Position = () => {
         </div>
       </div>
       <Divider dashed />
-      <Collapse defaultActiveKey={['1']} onChange={callback}>
+      <Collapse defaultActiveKey={['1']}>
         <Panel header="Types of Positioning" key="1">
           <ul>
             <li>
