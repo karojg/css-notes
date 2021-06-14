@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import About from './components/About';
 import Positioning from './components/Positioning';
 import Display from './components/Display';
 import './App.css';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Anchor } from 'antd';
 import 'antd/dist/antd.css';
 import { SmileOutlined } from '@ant-design/icons';
 
@@ -18,9 +17,6 @@ const App = () => {
           <div className="logo" />
           <Menu theme="dark" mode="horizontal">
             <Menu.Item key="1">
-              <Link to="/about">About</Link>
-            </Menu.Item>
-            <Menu.Item key="2">
               <Link to="/position">Position</Link>
             </Menu.Item>
             <Menu.Item key="3">
@@ -32,10 +28,7 @@ const App = () => {
           <div className="site-layout-content">
             <Switch>
               <Route exact path="/">
-                <About />
-              </Route>{' '}
-              <Route path="/about">
-                <About />
+                <Positioning />
               </Route>
               <Route path="/position">
                 <Positioning />
@@ -48,7 +41,7 @@ const App = () => {
         </Content>
       </Router>
       <Footer style={{ textAlign: 'center', bottom: 0, width: '100%' }}>
-        Made with some red wine <SmileOutlined />
+        Made with some red wine <SmileOutlined /> by <a href="https://github.com/karojg">karojg</a>
       </Footer>
     </Layout>
   );
