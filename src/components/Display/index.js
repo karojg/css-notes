@@ -19,15 +19,7 @@ const Display = () => {
     setDisplay(value);
   };
 
-  const displayItems = [
-    'block',
-    'inline',
-    'flex',
-    'none',
-    'inline-block',
-    'inline-table',
-    'inline-flex',
-  ];
+  const displayItems = ['block', 'inline', 'flex', 'inline-block', 'inline-table', 'inline-flex'];
 
   const option = displayItems.map((value) => {
     {
@@ -48,7 +40,7 @@ const Display = () => {
     console.log(flex);
   };
 
-  const flexDirectionOptions = ['none', 'row', 'row-reverse', 'column', 'column-reverse'];
+  const flexDirectionOptions = ['row', 'row-reverse', 'column', 'column-reverse'];
   const flexDirection = (
     <div className="select">
       <p>flex-direction</p>
@@ -66,7 +58,7 @@ const Display = () => {
     </div>
   );
 
-  const justifyContentOptions = ['none', 'flex-start', 'flex-end', 'center', 'space-between'];
+  const justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between'];
   const justifyContent = (
     <div className="select">
       <p>justify-content</p>
@@ -84,7 +76,7 @@ const Display = () => {
     </div>
   );
 
-  const flexWrapOptions = ['none', 'nowrap', 'wrap', 'wrap-reverse'];
+  const flexWrapOptions = ['nowrap', 'wrap', 'wrap-reverse'];
   const flexWrap = (
     <div className="select">
       <p>flex-wrap</p>
@@ -102,7 +94,7 @@ const Display = () => {
     </div>
   );
 
-  const alignItemsOptions = ['none', 'flex-start', 'flex-end', 'center', 'space-between'];
+  const alignItemsOptions = ['', 'flex-start', 'flex-end', 'center', 'space-between'];
   const alignItems = (
     <div className="select">
       <p>align-items</p>
@@ -121,7 +113,6 @@ const Display = () => {
   );
 
   const alignContentOptions = [
-    'none',
     'flex-start',
     'flex-end',
     'center',

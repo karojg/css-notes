@@ -1,7 +1,7 @@
 import React from 'react';
 
 const About = () => (
-  <div>
+  <div style={{ height: '77vh' }}>
     <h1>About this Guide</h1>
     <p>
       The main purpose is to provide a visual guide of some of the elements that I normally tend to

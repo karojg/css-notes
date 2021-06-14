@@ -47,7 +47,7 @@ const App = () => {
           </div>
         </Content>
       </Router>
-      <Footer style={{ textAlign: 'center' }}>
+      <Footer style={{ textAlign: 'center', bottom: 0, width: '100%' }}>
         Made with some red wine <SmileOutlined />
       </Footer>
     </Layout>
