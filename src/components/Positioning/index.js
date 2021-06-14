@@ -21,34 +21,22 @@ const Position = () => {
   };
 
   const positions = ['static', 'fixed', 'relative', 'absolute', 'sticky'];
-  const option = positions.map((value) => {
-    {
-      return (
-        <Option value={value} key={value}>
-          {value}
-        </Option>
-      );
-    }
-  });
+  const option = positions.map((value) => (
+    <Option value={value} key={value}>
+      {value}
+    </Option>
+  ));
 
   const labels = ['parent', 'child1', 'child2'];
 
-  const select = labels.map((value) => {
-    {
-      return (
-        <div className="select">
-          <p>{value}</p>
-          <Select
-            defaultValue="static"
-            style={{ width: 120 }}
-            onChange={(e) => handleChange(value, e)}
-          >
-            {option}
-          </Select>
-        </div>
-      );
-    }
-  });
+  const select = labels.map((value) => (
+    <div className="select">
+      <p>{value}</p>
+      <Select defaultValue="static" style={{ width: 120 }} onChange={(e) => handleChange(value, e)}>
+        {option}
+      </Select>
+    </div>
+  ));
 
   return (
     <div>
