@@ -21,16 +21,6 @@ const Display = () => {
 
   const displayItems = ['block', 'inline', 'flex', 'inline-block', 'inline-table', 'inline-flex'];
 
-  const option = displayItems.map((value) => {
-    {
-      return (
-        <Option value={value} key={value}>
-          {value}
-        </Option>
-      );
-    }
-  });
-
   // Flex Items
   const handleChangeFlex = (event, value) => {
     setFlex({
@@ -45,15 +35,11 @@ const Display = () => {
     <div className="select">
       <p>flex-direction</p>
       <Select style={{ width: 120 }} onChange={(e) => handleChangeFlex('flex-direction', e)}>
-        {flexDirectionOptions.map((value) => {
-          {
-            return (
-              <Option value={value} key={value}>
-                {value}
-              </Option>
-            );
-          }
-        })}
+        {flexDirectionOptions.map((value) => (
+          <Option value={value} key={value}>
+            {value}
+          </Option>
+        ))}
       </Select>
     </div>
   );
@@ -63,15 +49,11 @@ const Display = () => {
     <div className="select">
       <p>justify-content</p>
       <Select style={{ width: 120 }} onChange={(e) => handleChangeFlex('justify-content', e)}>
-        {justifyContentOptions.map((value) => {
-          {
-            return (
-              <Option value={value} key={value}>
-                {value}
-              </Option>
-            );
-          }
-        })}
+        {justifyContentOptions.map((value) => (
+          <Option value={value} key={value}>
+            {value}
+          </Option>
+        ))}
       </Select>
     </div>
   );
@@ -81,15 +63,11 @@ const Display = () => {
     <div className="select">
       <p>flex-wrap</p>
       <Select style={{ width: 120 }} onChange={(e) => handleChangeFlex('flex-wrap', e)}>
-        {flexWrapOptions.map((value) => {
-          {
-            return (
-              <Option value={value} key={value}>
-                {value}
-              </Option>
-            );
-          }
-        })}
+        {flexWrapOptions.map((value) => (
+          <Option value={value} key={value}>
+            {value}
+          </Option>
+        ))}
       </Select>
     </div>
   );
@@ -99,15 +77,11 @@ const Display = () => {
     <div className="select">
       <p>align-items</p>
       <Select style={{ width: 120 }} onChange={(e) => handleChangeFlex('align-items', e)}>
-        {alignItemsOptions.map((value) => {
-          {
-            return (
-              <Option value={value} key={value}>
-                {value}
-              </Option>
-            );
-          }
-        })}
+        {alignItemsOptions.map((value) => (
+          <Option value={value} key={value}>
+            {value}
+          </Option>
+        ))}
       </Select>
     </div>
   );
@@ -128,15 +102,11 @@ const Display = () => {
     <div className="select">
       <p>align-content</p>
       <Select style={{ width: 120 }} onChange={(e) => handleChangeFlex('align-content', e)}>
-        {alignContentOptions.map((value) => {
-          {
-            return (
-              <Option value={value} key={value}>
-                {value}
-              </Option>
-            );
-          }
-        })}
+        {alignContentOptions.map((value) => (
+          <Option value={value} key={value}>
+            {value}
+          </Option>
+        ))}
       </Select>
     </div>
   );
@@ -150,11 +120,15 @@ const Display = () => {
         <div className="select">
           <p>display</p>
           <Select style={{ width: 120 }} onChange={handleChange}>
-            {option}
+            {displayItems.map((value) => (
+              <Option value={value} key={value}>
+                {value}
+              </Option>
+            ))}
           </Select>
         </div>
       </div>
-      {display == 'flex' ? (
+      {display === 'flex' ? (
         <>
           <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
             Select a FlexBox Options
